@@ -22,7 +22,8 @@ namespace Bruno
 
         public void Spend(double save)
         {
-            _savemoney += save;
+            _savemoney += save;  //Para Retirar dinero la funcion deberia restar, en lugar de sumar, por tanto aqui esta el error
+            //_savemoney=savemoney-save;  es la linea sugerida para que el metodo funcione correctamente
         }
         public void ChangeName(string name)
         {

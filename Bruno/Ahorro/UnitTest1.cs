@@ -35,7 +35,7 @@ namespace Ahorro
             cliente.Spend(Retiro1);
             double AhorroObtenido = cliente.SaveMoney;
             //Assert
-            Assert.AreEqual(AhorroEsperado, AhorroObtenido, 0.001, "No se ha retirado correctamente");
+            Assert.AreEqual(AhorroEsperado, AhorroObtenido, 0.001, "No se ha retirado correctamente");//0.001 es el valor maximo de la diferencia entre el esperado y el obtenido
         
         }
         [TestMethod]

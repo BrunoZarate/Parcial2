@@ -36,6 +36,21 @@ namespace Ahorro
             double AhorroObtenido = cliente.SaveMoney;
             //Assert
             Assert.AreEqual(AhorroEsperado, AhorroObtenido, 0.001, "No se ha retirado correctamente");
+        
+        }
+        [TestMethod]
+        public void CambioNombre()
+        {
+            //Arrange
+            string Nombre1 = "Pepito";
+            double Monto = 100; //Necesario para crear el objeto
+            string Nombre2 = "Carlitos";        
+            Person cliente2 = new Person(Nombre1, Monto);
+            //Act
+            cliente2.ChangeName(Nombre2);
+            string nombreobtenido = cliente2.Name;
+            //Assert
+            Assert.AreNotEqual(nombreobtenido, Nombre2);
 
         }
     }
